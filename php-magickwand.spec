@@ -1,6 +1,5 @@
 %define     _pkgname MagickWandForPHP
 %define     _modname magickwand
-%define		extensionsdir	%(php-config --extension-dir 2>/dev/null)
 Summary:	ImageMagick MagickWand API bindings for PHP
 Name:		php-%{_modname}
 Version:	1.0.4
@@ -32,8 +31,8 @@ phpize
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{extensionsdir},%{php_sysconfdir}/conf.d}
-install modules/%{_modname}.so $RPM_BUILD_ROOT%{extensionsdir}
+install -d $RPM_BUILD_ROOT{%{php_extensiondir},%{php_sysconfdir}/conf.d}
+install modules/%{_modname}.so $RPM_BUILD_ROOT%{php_extensiondir}
 
 cat <<'EOF' > $RPM_BUILD_ROOT%{php_sysconfdir}/conf.d/%{_modname}.ini
 ; Enable %{_modname} extension module
@@ -47,4 +46,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README LICENSE ChangeLog AUTHOR
 %config(noreplace) %verify(not md5 mtime size) %{php_sysconfdir}/conf.d/magickwand.ini
-%attr(755,root,root) %{extensionsdir}/magickwand.so
+%attr(755,root,root) %{php_extensiondir}/magickwand.so
