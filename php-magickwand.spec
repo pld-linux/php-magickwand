@@ -11,8 +11,8 @@ Source0:	http://www.magickwand.org/download/php/%{_pkgname}-%{version}.tar.bz2
 URL:		http://www.magickwand.org/
 BuildRequires: php-devel
 BuildRequires: ImageMagick-devel >= 6.3.1
-Requires:	php(curl)
 Requires:	php-common >= 4:5.0.0
+Requires:	php-curl
 Requires:	ImageMagick >= 6.3.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
