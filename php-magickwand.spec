@@ -10,10 +10,12 @@ Group:		Development/Languages/PHP
 Source0:	http://www.magickwand.org/download/php/%{_pkgname}-%{version}.tar.bz2
 # Source0-md5:	f033b200ba135fec4bb017b07707c689
 URL:		http://www.magickwand.org/
-BuildRequires: php-devel
-BuildRequires: ImageMagick-devel >= 6.3.1
-Requires:	php-common >= 4:5.0.0
+BuildRequires:	ImageMagick-devel >= 6.3.1
+BuildRequires:	php-devel >= 3:5.0.0
+BuildRequires:	rpmbuild(macros) >= 1.344
 Requires:	ImageMagick >= 6.3.1
+%{?requires_php_extension}
+Requires:	php-common >= 4:5.0.4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -25,7 +27,7 @@ This module enables PHP access to the ImageMagick MagickWand API.
 %build
 phpize
 %configure \
-    --with-magickwand
+	--with-magickwand
 %{__make}
 
 %install
