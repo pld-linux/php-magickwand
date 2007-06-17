@@ -1,6 +1,7 @@
 %define     _pkgname MagickWandForPHP
 %define     _modname magickwand
 Summary:	ImageMagick MagickWand API bindings for PHP
+Summary(pl.UTF-8):	Wiązania API MagickWand z ImageMagicka dla PHP
 Name:		php-%{_modname}
 Version:	1.0.4
 Release:	0.3
@@ -19,6 +20,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 This module enables PHP access to the ImageMagick MagickWand API.
+
+%description -l pl.UTF-8
+Ten moduł pozwala na dostęp z poziomu PHP do API MagickWand z
+ImageMagicka.
 
 %prep
 %setup -q -n %{_pkgname}-%{version}
