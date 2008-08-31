@@ -14,6 +14,7 @@ BuildRequires:	rpmbuild(macros) >= 1.344
 Requires:	ImageMagick >= 6.3.5.9
 %{?requires_php_extension}
 Requires:	php-common >= 4:5.0.4
+Obsoletes:	MagickWandForPHP
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
