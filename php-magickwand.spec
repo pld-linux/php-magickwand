@@ -6,7 +6,7 @@ Release:	0.1
 License:	ImageMagick (Apache-like)
 Group:		Development/Languages/PHP
 Source0:	http://www.magickwand.org/download/php/MagickWandForPHP-%{version}.tar.bz2
-# Source0-md5:	f033b200ba135fec4bb017b07707c689
+# Source0-md5:	b52a5b7cf4db7078fa3db4cb6e55ecf4
 URL:		http://www.magickwand.org/
 BuildRequires:	ImageMagick-devel >= 6.3.5.9
 BuildRequires:	php-devel >= 3:5.0.0
