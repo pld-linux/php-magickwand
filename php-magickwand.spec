@@ -1,12 +1,12 @@
 Summary:	ImageMagick MagickWand API bindings for PHP
 Summary(pl.UTF-8):	Wiązania API MagickWand z ImageMagicka dla PHP
 Name:		php-magickwand
-Version:	1.0.7
+Version:	1.0.8
 Release:	0.1
 License:	ImageMagick (Apache-like)
 Group:		Development/Languages/PHP
 Source0:	http://www.magickwand.org/download/php/MagickWandForPHP-%{version}.tar.bz2
-# Source0-md5:	dc816e74ccf0bafa4249fdce7fb19ce5
+# Source0-md5:	af76f208772a43802c56f7dfbc800184
 URL:		http://www.magickwand.org/
 BuildRequires:	ImageMagick-devel >= 6.3.5.9
 BuildRequires:	php-devel >= 3:5.0.0
